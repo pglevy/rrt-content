@@ -1,5 +1,5 @@
 # Set a plain language title for the site.
-title: Bixal Rapid Response Team Content Library
+title: No-Code API with GitHub Pages | GitHub for No-Coders
 
 # Write a short description for the site. This is used for "meta description."
 description: A repo to hold a variety of content that can be used for different purposes, including pulling into templates, hosting assets, and formatting as JSON
@@ -27,3 +27,5 @@ collections:
   contraceptive-products:
     output: true
     # source: USAID GHSC
+
+data-file-name: post-offices

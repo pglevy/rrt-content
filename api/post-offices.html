@@ -4,11 +4,13 @@ permalink: /api/post-offices.json
 ---
 
 [
-  {% for office in site.data.post-offices %}
+  {% for row in site.data[site.data-file-name]  %}
     {
-      "name": "{{ office.NAME }}",
-      "address": "{{ office.ADDRESS }}",
-      "city": "{{ office.CITY }}"
+      {% for item in site.data[site.data-file-name][0] %}
+      {% assign heading = item[0] %}        
+        "{{ heading }}": "{{ row[heading] }}"
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}
